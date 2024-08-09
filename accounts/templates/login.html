@@ -1,0 +1,7 @@
+<form method="post" action=".">
+    {% csrf_token %}
+    <input name="username" type="text">
+    <input type="password" name="password">
+    <button type="submit">login</button>
+</form>
+{{erroe}}

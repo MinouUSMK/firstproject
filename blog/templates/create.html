@@ -1,0 +1,16 @@
+{%if not created%}
+
+<form method="post" action=".">
+    {% csrf_token %}
+    {{forms.as_p}}
+
+    
+    <button type="submit">submut</button>
+
+</form>
+{%else%}
+hi there your article was created
+<a href="/blog/{{obj.id}}">{{obj.title}}</a>
+</br>
+<p>{{obj.content}}</p>
+{%endif%}
